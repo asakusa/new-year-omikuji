@@ -40,3 +40,16 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* ✅ 修复：手机端抽屉/网格面板过高遮挡最后一行（让面板自己滚动） */
+.custom-scrollbar {
+  max-height: 75vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+}
+
+/* ✅ 修复：防止滚动传递导致页面跟着动（这条是加固） */
+body {
+  overscroll-behavior: none;
+}
+
