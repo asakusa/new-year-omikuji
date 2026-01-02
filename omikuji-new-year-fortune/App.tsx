@@ -208,7 +208,7 @@ const App: React.FC = () => {
         {/* 抽屉提示 */}
         {state.step === 'reveal_number' && (
            <div className="fixed bottom-10 left-0 w-full z-40 flex justify-center pointer-events-none px-4">
-              <div className="bg-gradient-to-r from-[#78350f] via-yellow-500 to-[#78350f] text-[#451a03] py-4 px-8 rounded-full shadow-2xl border-2 border-yellow-100/30 animate-pulse font-black text-lg md:text-3xl text-center">
+              <div className="bg-gradient-to-r from-[#78350f] via-yellow-500 to-[#78350f] text-[#451a03] py-4 px-8 rounded-full shadow-2xl border-2 border-yellow-100/30 animate-pulse font-black text-lg md:text-3xl text-center text-sm leading-tight">
                  {t.findingDrawer.replace('{n}', state.drawnNumber?.toString() || '')}
               </div>
            </div>
